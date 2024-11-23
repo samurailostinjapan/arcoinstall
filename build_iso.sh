@@ -2,9 +2,14 @@
 
 set -e
 
-if [-d /tmp/archlive ]; then
-	sudo rm -r /tmp/archlive
+if [ -d /tmp/archlive ]; then
+	sudo rm -rfv /tmp/archlive
 fi
+
+echo "########################################################"
+echo "########################################################"
+echo "########################################################"
+echo "########################################################"
 
 packages_file="/tmp/archlive/packages.x86_64"
 
