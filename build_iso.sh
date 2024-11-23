@@ -2,6 +2,10 @@
 
 set -e
 
+if [-d /tmp/archlive ]; then
+	sudo rm -r /tmp/archlive
+fi
+
 packages_file="/tmp/archlive/packages.x86_64"
 
 # Packages to add to the archiso profile packages
@@ -44,7 +48,11 @@ for package in "${packages[@]}"; do
 	echo "$package" >> "$packages_file"
 done
 
+cp pacman.conf /tmp/archlive
+mkdir -p /tmp/archlive/work/x86_64/airootfs/etc/
+cp pacman.conf /tmp/archlive/work/x86_64/airootfs/etc/
+
 find /tmp/archlive
 cd /tmp/archlive
 
-mkarchiso -v -w work/ -o out/ ./
+mkarchiso -v -w work/ -o out/ -C /tmp/archlive/pacman.conf ./
