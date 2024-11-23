@@ -8,6 +8,8 @@
 
 Is it possible to adapt **archinstall** to automate the installation of ArcoLinux with the ChadWM configuration and all its packages, using an Arch Linux ISO and configuring it through **archinstall**?
 
+No calamares used!
+
 [![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
 
 
