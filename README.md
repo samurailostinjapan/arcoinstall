@@ -3,6 +3,14 @@
 
 <!-- </div> -->
 # Arch Installer
+
+# Personal whatif
+
+Can I adapt archinstall so that I can install ArcoLinux Chadwm and all its configs with an Arch Linux iso and installed with archinstall
+
+https://youtu.be/DUNuRs849P4
+
+
 [![Lint Python and Find Syntax Errors](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml/badge.svg)](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml)
 
 Just another guided/automated [Arch Linux](https://wiki.archlinux.org/index.php/Arch_Linux) installer with a twist.

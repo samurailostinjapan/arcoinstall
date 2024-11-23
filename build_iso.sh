@@ -2,6 +2,12 @@
 
 set -e
 
+# Check if the script is run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "This script must be run as root. Please use sudo." >&2
+    exit 1
+fi
+
 if [ -d /tmp/archlive ]; then
 	sudo rm -rfv /tmp/archlive
 fi
