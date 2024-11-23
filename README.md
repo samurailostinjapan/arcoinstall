@@ -8,10 +8,9 @@
 
 Can I adapt archinstall so that I can install ArcoLinux Chadwm and all its configs with an Arch Linux iso and installed with archinstall
 
-https://youtu.be/DUNuRs849P4
+[![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
 
 
-[![Lint Python and Find Syntax Errors](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml/badge.svg)](https://github.com/archlinux/archinstall/actions/workflows/flake8.yaml)
 
 Just another guided/automated [Arch Linux](https://wiki.archlinux.org/index.php/Arch_Linux) installer with a twist.
 The installer also doubles as a python library to install Arch Linux and manage services, packages, and other things inside the installed system *(Usually from a live medium)*.
