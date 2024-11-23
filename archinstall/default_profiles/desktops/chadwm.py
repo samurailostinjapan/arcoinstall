@@ -21,6 +21,7 @@ class ChadwmProfile(XorgProfile):
 		    'arcolinux-chadwm-pacman-hook-git',
 		    'arcolinux-nlogout-git',
 		    'arcolinux-powermenu-git',
+		    'arcolinux-sddm-simplicity-git',
 		    'arcolinux-wallpapers-candy-git',
 		    'arcolinux-wallpapers-git',
 		    'arconet-xfce',
@@ -60,5 +61,5 @@ class ChadwmProfile(XorgProfile):
 
 	@property
 	def default_greeter_type(self) -> GreeterType | None:
-		return GreeterType.Lightdm
+		return GreeterType.Sddm
 
