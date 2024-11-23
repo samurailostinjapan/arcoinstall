@@ -60,4 +60,4 @@ cp pacman.conf /tmp/archlive/work/x86_64/airootfs/etc/
 find /tmp/archlive
 cd /tmp/archlive
 
-mkarchiso -v -w work/ -o out/ -C /tmp/archlive/pacman.conf ./
+mkarchiso -v -w work/ -o out/ ./
