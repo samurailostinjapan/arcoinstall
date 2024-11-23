@@ -31,6 +31,7 @@ class ChadwmProfile(XorgProfile):
 		    'eww',
 		    'feh',
 		    'gcc',
+		    'git',
 		    'gvfs',
 		    'lolcat',
 		    'lxappearance',
