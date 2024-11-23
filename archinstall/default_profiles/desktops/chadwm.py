@@ -20,6 +20,7 @@ class ChadwmProfile(XorgProfile):
 		    'arcolinux-wallpapers-candy-git',
 		    'arcolinux-wallpapers-git',
 		    'arconet-xfce',
+		    'arc-gtk-theme',
 		    'autorandr',
 		    'dash',
 		    'dmenu',
