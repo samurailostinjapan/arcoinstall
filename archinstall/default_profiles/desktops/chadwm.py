@@ -12,6 +12,8 @@ class ChadwmProfile(XorgProfile):
 		return [
 		    'a-candy-beauty-icon-theme-git',
 		    'alacritty',
+		    'arandr',
+		    'arc-gtk-theme',
 		    'archlinux-logout-git',
 		    'archlinux-tweak-tool-git',
 		    'arcolinux-alacritty-git',
@@ -22,9 +24,7 @@ class ChadwmProfile(XorgProfile):
 		    'arcolinux-wallpapers-candy-git',
 		    'arcolinux-wallpapers-git',
 		    'arconet-xfce',
-		    'arc-gtk-theme',
 		    'autorandr',
-		    'arandr',
 		    'bash-completion',
 		    'dash',
 		    'dmenu',
@@ -35,6 +35,7 @@ class ChadwmProfile(XorgProfile):
 		    'lolcat',
 		    'lxappearance',
 		    'make',
+		    'paru-git',
 		    'picom',
 		    'polkit-gnome',
 		    'rofi-lbonn-wayland',
@@ -53,6 +54,7 @@ class ChadwmProfile(XorgProfile):
 		    'xfce4-taskmanager',
 		    'xfce4-terminal',
 		    'xorg-xsetroot',
+		    'yay-git',
 		]
 
 	@property
