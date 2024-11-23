@@ -25,6 +25,7 @@ class ChadwmProfile(XorgProfile):
 		    'arc-gtk-theme',
 		    'autorandr',
 		    'arandr',
+		    'bash-completion',
 		    'dash',
 		    'dmenu',
 		    'eww',
