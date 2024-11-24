@@ -38,6 +38,7 @@ class ChadwmProfile(XorgProfile):
             "gcc",
             "git",
             "gvfs",
+            "gvfs-dnssd",
             "lolcat",
             "lxappearance",
             "make",
