@@ -291,5 +291,7 @@ sudo pacman -S virtualbox-guest-utils
 sudo systemctl enable vboxservice.service
 
 Alacritty does not start
+I need to figure out why this one gets installed
+a dependency of some sort - xorg - networkmanager group
 
 sudo pacman -R nvidia-340xx-utils
