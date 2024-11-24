@@ -17,7 +17,7 @@ class ChadwmProfile(XorgProfile):
             "archlinux-logout-git",
             "archlinux-tweak-tool-git",
             "arcolinux-alacritty-git",
-            "arcolinux-chadwm-git",
+            "arcolinux-chadwm-nemesis-git",
             "arcolinux-chadwm-pacman-hook-git",
             "arcolinux-nlogout-git",
             "arcolinux-powermenu-git",
