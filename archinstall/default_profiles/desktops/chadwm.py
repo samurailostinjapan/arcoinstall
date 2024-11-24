@@ -46,7 +46,7 @@ class ChadwmProfile(XorgProfile):
             "mkinitcpio-firmware",
             "neofetch",
             "paru-git",
-            "picom",
+            "picom-git",
             "polkit-gnome",
             "ripgrep",
             "rofi-lbonn-wayland",
