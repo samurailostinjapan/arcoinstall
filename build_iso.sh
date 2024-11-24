@@ -37,6 +37,9 @@ mkdir -p /tmp/archlive/airootfs/root/archinstall-git
 cp -r . /tmp/archlive/airootfs/root/archinstall-git
 
 cat <<- _EOF_ | tee /tmp/archlive/airootfs/root/.zprofile
+	loadkeys be-latin1
+	alias archinstall="archinstall --advanced"
+	
 	cd archinstall-git
 	rm -rf dist
 
