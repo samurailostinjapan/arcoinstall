@@ -73,8 +73,8 @@ for package in "${packages[@]}"; do
 done
 
 cp pacman.conf /tmp/archlive
-mkdir -p /tmp/archlive/work/x86_64/airootfs/etc/
-cp pacman.conf /tmp/archlive/work/x86_64/airootfs/etc/
+#mkdir -p /tmp/archlive/work/x86_64/airootfs/etc/
+#cp pacman.conf /tmp/archlive/work/x86_64/airootfs/etc/
 
 find /tmp/archlive
 cd /tmp/archlive
