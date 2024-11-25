@@ -23,7 +23,7 @@ class ChadwmProfile(XorgProfile):
             "arcolinux-chadwm-nemesis-git",
             "arcolinux-chadwm-pacman-hook-git",
             "arcolinux-fastfetch-git",
-            "arcolinux-hblock-git,"
+            "arcolinux-hblock-git",
             "arcolinux-nlogout-git",
             "arcolinux-powermenu-git",
             "arcolinux-wallpapers-candy-git",
@@ -47,7 +47,7 @@ class ChadwmProfile(XorgProfile):
             "gitahead-git",
             "gvfs",
             "gvfs-dnssd",
-            "gvfs-smb"
+            "gvfs-smb",
             "lolcat",
             "lxappearance",
             "make",
