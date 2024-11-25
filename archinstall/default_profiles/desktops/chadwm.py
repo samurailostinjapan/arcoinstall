@@ -39,7 +39,7 @@ class ChadwmProfile(XorgProfile):
             "dmenu",
             "duf",
             "eww",
-            "fastfetch",
+            "fastfetch-git",
             "feh",
             "firefox",
             "gcc",
