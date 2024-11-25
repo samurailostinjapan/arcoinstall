@@ -20,7 +20,7 @@ class ChadwmProfile(XorgProfile):
             "arcolinux-app-glade-git",
             "arcolinux-arc-dawn-git",
             "arcolinux-btop-git",
-            "arcolinux-chadwm-nemesis-git",
+            "arcolinux-chadwm-git",
             "arcolinux-chadwm-pacman-hook-git",
             "arcolinux-fastfetch-git",
             "arcolinux-hblock-git",
