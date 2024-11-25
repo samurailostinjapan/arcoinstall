@@ -27,7 +27,7 @@ class ChadwmProfile(XorgProfile):
             "arcolinux-nlogout-git",
             "arcolinux-powermenu-git",
             "arcolinux-wallpapers-candy-git",
-            "arcolinux-wallpapers-git",
+            "arconet-wallpapers",
             "arconet-variety-config",
             "arconet-xfce",
             "autorandr",
