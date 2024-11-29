@@ -8,7 +8,7 @@ if TYPE_CHECKING:
 
 class ChadwmProfile(XorgProfile):
     def __init__(self) -> None:
-        super().__init__('Chadwm', ProfileType.WindowMgr, description='')
+        super().__init__("Chadwm", ProfileType.WindowMgr, description='')
 
     @property
     def packages(self) -> list[str]:
