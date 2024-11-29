@@ -4,7 +4,7 @@ import urllib.parse
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, override
 
 from archinstall.tui import Alignment, EditMenu, FrameProperties, MenuItem, MenuItemGroup, ResultType, SelectMenu
 
@@ -15,7 +15,11 @@ from .output import FormattedOutput, debug
 from .storage import storage
 
 if TYPE_CHECKING:
-	_: Any
+	from collections.abc import Callable
+
+	from archinstall.lib.translationhandler import DeferredTranslation
+
+	_: Callable[[str], DeferredTranslation]
 
 
 class SignCheck(Enum):
@@ -125,16 +129,19 @@ class CustomMirrorList(ListManager):
 			str(_('Change custom mirror')),
 			str(_('Delete custom mirror'))
 		]
+
 		super().__init__(
-			'',
 			custom_mirrors,
 			[self._actions[0]],
-			self._actions[1:]
+			self._actions[1:],
+			''
 		)
 
+	@override
 	def selected_action_display(self, selection: CustomMirror) -> str:
 		return selection.name
 
+	@override
 	def handle_action(
 		self,
 		action: str,
@@ -295,6 +302,7 @@ class MirrorMenu(AbstractSubMenu):
 		output = FormattedOutput.as_table(custom_mirrors)
 		return output.strip()
 
+	@override
 	def run(self) -> MirrorConfiguration:
 		super().run()
 

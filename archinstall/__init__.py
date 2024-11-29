@@ -32,11 +32,13 @@ from .lib.output import FormattedOutput, debug, error, info, log, warn
 from .lib.pacman import Pacman
 from .lib.plugins import load_plugin, plugins
 from .lib.storage import storage
-from .lib.translationhandler import DeferredTranslation, Language, TranslationHandler
+from .lib.translationhandler import DeferredTranslation, Language, translation_handler
 from .tui import Tui
 
 if TYPE_CHECKING:
-	_: Any
+	from collections.abc import Callable
+
+	_: Callable[[str], DeferredTranslation]
 
 
 __version__ = "3.0.1"
@@ -222,7 +224,7 @@ def load_config() -> None:
 	arguments['locale_config'] = locale.LocaleConfiguration.parse_arg(arguments)
 
 	if (archinstall_lang := arguments.get('archinstall-language', None)) is not None:
-		arguments['archinstall-language'] = TranslationHandler().get_language_by_name(archinstall_lang)
+		arguments['archinstall-language'] = translation_handler.get_language_by_name(archinstall_lang)
 
 	if disk_config := arguments.get('disk_config', {}):
 		arguments['disk_config'] = disk.DiskLayoutConfiguration.parse_arg(disk_config)

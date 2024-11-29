@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING
 
 from archinstall.lib.menu.menu_helper import MenuHelper
 from archinstall.tui import Alignment, FrameProperties, MenuItem, MenuItemGroup, Orientation, PreviewStyle, ResultType, SelectMenu
@@ -14,7 +14,11 @@ from ..storage import storage
 from ..utils.util import prompt_dir
 
 if TYPE_CHECKING:
-	_: Any
+	from collections.abc import Callable
+
+	from archinstall.lib.translationhandler import DeferredTranslation
+
+	_: Callable[[str], DeferredTranslation]
 
 
 def select_devices(preset: list[disk.BDevice] | None = []) -> list[disk.BDevice]:
@@ -467,7 +471,7 @@ def suggest_multi_disk_layout(
 			delta = device.device_info.total_size - desired_root_partition_size
 			devices_delta[device] = delta
 
-	sorted_delta: list[tuple[disk.BDevice, Any]] = sorted(devices_delta.items(), key=lambda x: x[1])
+	sorted_delta: list[tuple[disk.BDevice, disk.Size]] = sorted(devices_delta.items(), key=lambda x: x[1])
 	root_device: disk.BDevice | None = sorted_delta[0][0]
 
 	if home_device is None or root_device is None:

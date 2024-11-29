@@ -11,7 +11,7 @@ from collections.abc import Callable
 from curses.textpad import Textbox
 from dataclasses import dataclass
 from types import FrameType, TracebackType
-from typing import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal, override
 
 from ..lib.output import debug
 from .help import Help
@@ -34,7 +34,9 @@ from .types import (
 )
 
 if TYPE_CHECKING:
-	_: Any
+	from archinstall.lib.translationhandler import DeferredTranslation
+
+	_: Callable[[str], DeferredTranslation]
 
 
 class AbstractCurses(metaclass=ABCMeta):
@@ -392,7 +394,7 @@ class EditViewport(AbstractViewport):
 			self._textbox = curses.textpad.Textbox(self._edit_win)
 			self._main_win.refresh()
 
-		self._textbox.edit(self.process_key)  # type: ignore
+		self._textbox.edit(self.process_key)  # type: ignore[arg-type]
 
 
 @dataclass
@@ -682,6 +684,7 @@ class EditMenu(AbstractCurses):
 		self._clear_all()
 		return result
 
+	@override
 	def resize_win(self) -> None:
 		self._draw()
 
@@ -724,6 +727,7 @@ class EditMenu(AbstractCurses):
 			self._input_vp.update()
 			self._input_vp.edit(default_text=self._default_text)
 
+	@override
 	def kickoff(self, win: 'curses._CursesWindow') -> Result:
 		try:
 			self._draw()
@@ -887,6 +891,7 @@ class SelectMenu(AbstractCurses):
 		self._clear_all()
 		return result
 
+	@override
 	def kickoff(self, win: 'curses._CursesWindow') -> Result:
 		self._draw()
 
@@ -907,6 +912,7 @@ class SelectMenu(AbstractCurses):
 				else:
 					return self.kickoff(win)
 
+	@override
 	def resize_win(self) -> None:
 		self._draw()
 
@@ -1475,8 +1481,8 @@ class Tui:
 			return Tui.t()._main_loop(component)
 
 	def _sig_win_resize(self, signum: int, frame: FrameType | None) -> None:
-		if hasattr(self, '_component') and self._component is not None:  # pylint: disable=E1101
-			self._component.resize_win()  # pylint: disable=E1101
+		if hasattr(self, '_component') and self._component is not None:  # pylint: disable=no-member
+			self._component.resize_win()  # pylint: disable=no-member
 
 	def _main_loop(self, component: AbstractCurses) -> Result:
 		self._screen.refresh()

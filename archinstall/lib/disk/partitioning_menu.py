@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, override
 
 from archinstall.tui import Alignment, EditMenu, FrameProperties, MenuItem, MenuItemGroup, Orientation, ResultType, SelectMenu
 
@@ -27,7 +27,11 @@ from .device_model import (
 from .subvolume_menu import SubvolumeMenu
 
 if TYPE_CHECKING:
-	_: Any
+	from collections.abc import Callable
+
+	from archinstall.lib.translationhandler import DeferredTranslation
+
+	_: Callable[[str], DeferredTranslation]
 
 
 @dataclass
@@ -54,14 +58,21 @@ class PartitioningList(ListManager):
 		}
 
 		display_actions = list(self._actions.values())
-		super().__init__(prompt, device_partitions, display_actions[:2], display_actions[3:])
+		super().__init__(
+			device_partitions,
+			display_actions[:2],
+			display_actions[3:],
+			prompt
+		)
 
+	@override
 	def selected_action_display(self, selection: PartitionModification) -> str:
 		if selection.status == ModificationStatus.Create:
 			return str(_('Partition - New'))
 		else:
 			return str(selection.dev_path)
 
+	@override
 	def filter_options(self, selection: PartitionModification, options: list[str]) -> list[str]:
 		not_filter = []
 
@@ -94,6 +105,7 @@ class PartitioningList(ListManager):
 
 		return [o for o in options if o not in not_filter]
 
+	@override
 	def handle_action(
 		self,
 		action: str,
@@ -179,8 +191,8 @@ class PartitioningList(ListManager):
 
 	def _set_btrfs_subvolumes(self, partition: PartitionModification) -> None:
 		partition.btrfs_subvols = SubvolumeMenu(
-			str(_("Manage btrfs subvolumes for current partition")),
-			partition.btrfs_subvols
+			partition.btrfs_subvols,
+			None
 		).run()
 
 	def _prompt_formatting(self, partition: PartitionModification) -> None:

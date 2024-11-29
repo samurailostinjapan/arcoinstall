@@ -32,20 +32,23 @@ from .models.bootloader import Bootloader
 from .models.users import User
 from .output import FormattedOutput
 from .profile.profile_menu import ProfileConfiguration
-from .translationhandler import Language, TranslationHandler
+from .translationhandler import Language, translation_handler
 from .utils.util import format_cols, get_password
 
 if TYPE_CHECKING:
-	_: Any
+	from collections.abc import Callable
+
+	from archinstall.lib.translationhandler import DeferredTranslation
+
+	_: Callable[[str], DeferredTranslation]
 
 
 class GlobalMenu(AbstractMenu):
 	def __init__(self, data_store: dict[str, Any]):
 		self._data_store = data_store
-		self._translation_handler = TranslationHandler()
 
 		if 'archinstall-language' not in data_store:
-			data_store['archinstall-language'] = self._translation_handler.get_language_by_abbr('en')
+			data_store['archinstall-language'] = translation_handler.get_language_by_abbr('en')
 
 		menu_optioons = self._get_menu_options(data_store)
 		self._item_group = MenuItemGroup(
@@ -259,8 +262,8 @@ class GlobalMenu(AbstractMenu):
 
 	def _select_archinstall_language(self, preset: Language) -> Language:
 		from .interactions.general_conf import select_archinstall_language
-		language = select_archinstall_language(self._translation_handler.translated_languages, preset)
-		self._translation_handler.activate(language)
+		language = select_archinstall_language(translation_handler.translated_languages, preset)
+		translation_handler.activate(language)
 
 		self._upate_lang_text()
 
@@ -307,7 +310,7 @@ class GlobalMenu(AbstractMenu):
 			if network_config.type == NicType.MANUAL:
 				output = FormattedOutput.as_table(network_config.nics)
 			else:
-				output = f'{str(_('Network configuration'))}:\n{network_config.type.display_msg()}'
+				output = f'{_('Network configuration')}:\n{network_config.type.display_msg()}'
 
 			return output
 		return None
@@ -360,7 +363,7 @@ class GlobalMenu(AbstractMenu):
 
 	def _prev_uki(self, item: MenuItem) -> str | None:
 		if item.value is not None:
-			output = f'{str(_('Unified kernel images'))}: '
+			output = f'{_('Unified kernel images')}: '
 			output += str(_('Enabled')) if item.value else str(_('Disabled'))
 			return output
 		return None
