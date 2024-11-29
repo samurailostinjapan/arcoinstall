@@ -25,6 +25,7 @@ class ChadwmProfile(XorgProfile):
             "arcolinux-fastfetch-git",
             "arcolinux-hblock-git",
             "arcolinux-nlogout-git",
+            "arcolinux-paru-git",
             "arcolinux-powermenu-git",
             "arcolinux-wallpapers-candy-git",
             "arconet-wallpapers",
