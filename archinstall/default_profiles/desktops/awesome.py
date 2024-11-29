@@ -15,7 +15,9 @@ class AwesomeProfile(XorgProfile):
 	@override
 	def packages(self) -> list[str]:
 		return super().packages + [
+			'a-candy-beauty-icon-theme-git',
 			'alacritty',
+			'arandr',
 			'archlinux-logout-git',
 			'arcolinux-awesome-git',
 			'arcolinux-config-all-desktops-git',
@@ -26,13 +28,16 @@ class AwesomeProfile(XorgProfile):
 			'arcolinux-powermenu-git',
 			'arcolinux-rofi-git',
 			'arcolinux-rofi-themes-git',
+			'archlinux-tweak-tool-git',
 			'arcolinux-volumeicon-git',
 			'arcolinux-wallpapers-git',
 			'arconet-xfce',
 			'autorandr',
 			'awesome',
+			'bash-completion',
+			'bibata-cursor-theme-bin',
 			'dmenu',
-			'fastfetch',
+			'fastfetch-git',
 			'feh',
 			'gnu-free-fonts',
 			'gvfs',
