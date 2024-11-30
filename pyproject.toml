@@ -33,7 +33,7 @@ dev = [
     "mypy==1.13.0",
     "flake8==7.1.1",
     "pre-commit==4.0.1",
-    "ruff==0.8.0",
+    "ruff==0.8.1",
     "pylint==3.3.1",
     "pylint-pydantic==0.3.2",
     "pytest==8.3.3",
@@ -124,10 +124,6 @@ module = "archinstall.tui.*"
 warn_unreachable = false
 
 [[tool.mypy.overrides]]
-module = "tests.*"
-ignore_errors = true
-
-[[tool.mypy.overrides]]
 module = [
     "parted",
 ]
@@ -153,6 +149,7 @@ py-version = "3.12"
 recursive = true
 
 [tool.pylint.format]
+indent-string = '\t'
 max-line-length = 160
 
 [tool.pylint."messages control"]
@@ -160,7 +157,6 @@ disable = [
     "C",
     "R",
     "attribute-defined-outside-init",
-    "bad-indentation",
     "bare-except",
     "broad-exception-caught",
     "cell-var-from-loop",
@@ -169,14 +165,11 @@ disable = [
     "fixme",
     "protected-access",
     "raise-missing-from",
-    "redefined-builtin",
-    "redefined-outer-name",
     "unnecessary-lambda",
     "unreachable",
     "unspecified-encoding",
     "unused-argument",
     "unused-variable",
-    "useless-parent-delegation",
 ]
 
 [tool.pylint.refactoring]
@@ -226,8 +219,6 @@ ignore = [
     "RUF015",   # unnecessary-iterable-allocation-for-first-element
     "RUF039",   # unraw-re-pattern
     "UP028",    # yield-in-for-loop
-    "UP031",    # printf-string-formatting
-    "UP032",    # f-string
     "UP037",    # quoted-annotation
     "W191",     # tab-indentation
 ]

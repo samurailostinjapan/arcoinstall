@@ -71,7 +71,7 @@ def get_hw_addr(ifname: str) -> str:
 	import fcntl
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	ret = fcntl.ioctl(s.fileno(), 0x8927, struct.pack('256s', bytes(ifname, 'utf-8')[:15]))
-	return ':'.join('%02x' % b for b in ret[18:24])
+	return ':'.join(f'{b:02x}' for b in ret[18:24])
 
 
 def list_interfaces(skip_loopback: bool = True) -> dict[str, str]:
@@ -191,8 +191,8 @@ def ping(hostname, timeout=5) -> int:
 				if icmp_type == 0 and response[-len(random_identifier):] == random_identifier:
 					latency = round((time.time() - started) * 1000)
 					break
-		except OSError as error:
-			debug(f"Error: {error}")
+		except OSError as e:
+			debug(f"Error: {e}")
 			break
 
 	icmp_socket.close()
