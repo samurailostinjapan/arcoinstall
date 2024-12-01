@@ -31,6 +31,8 @@ packages=(
 	python-wheel
 	python-simple-term-menu
 	python-pyparted
+	arcolinux-keyring
+	arcolinux-mirrorlist-git
 )
 
 mkdir -p /tmp/archlive/airootfs/root/archinstall-git
