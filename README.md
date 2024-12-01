@@ -17,8 +17,10 @@ No calamares used! We boot up just like the Arch Linux ISO.
 
 **Arcoinstall** is a project, based on [archinstall](https://github.com/archlinux/archinstall), designed to automate the installation of **ArcoLinux** with specific configurations like e.g. **CHADWM**. This project simplifies the installation process by providing pre-configured scripts and modules tailored for advanced users who prefer a command-line-driven approach.
 
+https://arcolinuxb.com/arcoinstall/
 
-Playlist on Youtube
+
+**Playlist on Youtube**
 
 [![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
 
