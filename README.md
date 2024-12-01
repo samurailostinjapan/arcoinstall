@@ -22,7 +22,7 @@ https://arcolinuxb.com/arcoinstall/
 
 **Playlist on Youtube**
 
-[![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
+[![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://www.youtube.com/playlist?list=PLlloYVGq5pS4B8KT1w0Rl7mpJzROyi7jX)
 
 
 ## Why Use Arcoinstall?
