@@ -10,6 +10,18 @@ Is it possible to adapt **archinstall** to automate the installation of ArcoLinu
 
 No calamares used!
 
+# MOVED TO 
+
+https://github.com/arconetpro/arcoinstall
+
+# NO UPDATES HERE ANYMORE 
+
+# KEEPING CODE FOR TESTING PURPOSES MAYBE
+
+# PART OF ARCOLINUX ECOSYSTEM NOW AS IT WORKS WONDERS
+
+# AND WITHOUT CALAMARES
+
 [![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
 
 
