@@ -38,18 +38,9 @@ cp -r . /tmp/archlive/airootfs/root/archinstall-git
 
 cat <<- _EOF_ | tee /tmp/archlive/airootfs/root/.zprofile
 	echo
-	echo
-	echo -e "\033[1;34mSetting keyboard layout to be-latin1 for azerty keyboard \033[0m"
-	loadkeys be-latin1
-	echo
-	echo -e "\033[1;32mCreating alias: 'archinstall becomes archinstall --advanced' \033[0m"
-	alias archinstall="archinstall --advanced"
-	echo
+	alias be="loadkeys be-latin1"
+	alias arch="archinstall --advanced"
 
-	# Prompt to continue
-	echo -e "\033[1;33mPress any key to continue...\033[0m"
-	read input
-	
 	cd archinstall-git
 	rm -rf dist
 
