@@ -1,11 +1,9 @@
-<!-- <div align="center"> -->
 <p align="center">
  <img src="https://github.com/erikdubois/arcolinux-nemesis/blob/master/Personal/settings/arcolinuxws.png">
 </p>
-<!-- </div> -->
-<!-- <div align="center"> -->
+<p align="center">
 <img src="https://github.com/archlinux/archinstall/raw/master/docs/logo.png" alt="drawing" width="200"/>
-<!-- </div> -->
+</p>
 
 # arcoinstall - create you own Arch Linux ISO
 
