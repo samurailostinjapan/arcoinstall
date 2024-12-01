@@ -5,14 +5,69 @@
 <img src="https://github.com/archlinux/archinstall/raw/master/docs/logo.png" alt="drawing" width="200"/>
 </p>
 
-# arcoinstall - create you own Arch Linux ISO
+# Arcoinstall
 
-Is it possible to adapt **archinstall** to automate the installation of ArcoLinux with the ArcoLinux configuration and all its packages, using an Arch Linux ISO and configuring it through **archinstall**?
+# Create you own Arch Linux ISO with access to the ArcoLinux packages and configs
 
-No calamares used!
+**It always starts with a what-if.**
+
+Is it possible to adapt **archinstall** to automate the installation of ArcoLinux with the ArcoLinux configurations and all its packages, using an Arch Linux ISO and configuring it through **archinstall**?
+
+No calamares used! We boot up just like the Arch Linux ISO.
+
+**Arcoinstall** is a project, based on [archinstall](https://github.com/archlinux/archinstall), designed to automate the installation of **ArcoLinux** with specific configurations like e.g. **CHADWM**. This project simplifies the installation process by providing pre-configured scripts and modules tailored for advanced users who prefer a command-line-driven approach.
 
 
 [![YouTube Video](https://img.youtube.com/vi/DUNuRs849P4/0.jpg)](https://youtu.be/DUNuRs849P4)
+
+
+## Why Use Arcoinstall?
+
+- **Customizability:** Adapt the installation process to include specific desktop environments or tiling window managers, such as CHADWM, by modifying package lists and scripts.
+- **Reproducibility:** Ensure consistent system setups across multiple installations or devices.
+- **CLI-First Approach:** Ideal for users who prefer command-line tools over graphical installers like Calamares.
+
+
+## Features
+
+- Pre-configured scripts for installing ArcoLinux with ArcoLinux configs and apps.
+- Easy-to-edit profiles for customizing installations.
+- No graphical interface required – fully terminal-based.
+
+
+## Adapt Arcoinstall to Your Needs
+
+You can modify the included scripts and profiles to create a personalized installer for your preferred desktop environment or window manager. For example:
+- Change the package list to include or exclude specific software.
+- Add post-install scripts to configure your system further.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
