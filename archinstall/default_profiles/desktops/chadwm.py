@@ -16,8 +16,8 @@ class ChadwmProfile(XorgProfile):
 		super().__init__("Chadwm", ProfileType.WindowMgr, description='')
 
 	@property
+	@override
 	def packages(self) -> list[str]:
-		# return super().packages + [
 		return [
 			'a-candy-beauty-icon-theme-git',
 			'alacritty',
@@ -58,6 +58,7 @@ class ChadwmProfile(XorgProfile):
 			'eww',
 			'fastfetch-git',
 			'feh',
+			'file-roller',
 			'firefox',
 			'gcc',
 			'git',
