@@ -123,6 +123,7 @@ class SwayProfile(XorgProfile):
 			'thunar-archive-plugin',
 			'thunar-volman',
 			'ttf-jetbrains-mono-nerd',
+			'wlroots',
 		] + additional
 
 	@property
