@@ -30,7 +30,7 @@
 # reset - commit your changes or stash them before you merge
 # git reset --hard - personal alias - grh
 
-git checkout main
+git checkout development
 
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
@@ -54,7 +54,7 @@ git commit -m "$input"
 
 if grep -q main .git/config; then
 	echo "Using main"
-		git push -u origin main
+		git push -u origin development
 fi
 
 echo "################################################################"
