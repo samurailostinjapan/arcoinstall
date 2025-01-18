@@ -34,7 +34,7 @@ class GnomeProfile(XorgProfile):
 			'arcolinux-gtk-surfn-arc-git',
 			'arcolinux-keyring',
 			'arcolinux-mirrorlist-git',
-			'arcolinux-pacman-git',
+			'arcoinstall-pacman-git',
 			'arcolinux-paru-git',
 			'arcolinux-root-git',
 			'arconet-variety-config',
@@ -77,9 +77,9 @@ class GnomeProfile(XorgProfile):
 			'yay-git',
 			] + [
 			'archlinux-tweak-tool-git',
+			'arcoinstall-system-config-git',
 			'arcolinux-gnome-git',
 			'extension-manager-git',
-			'gnome-tweaks',
 		]
 
 	@override
