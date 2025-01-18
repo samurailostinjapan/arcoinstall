@@ -124,7 +124,7 @@ class SwayProfile(XorgProfile):
 			'thunar-volman',
 			'ttf-jetbrains-mono-nerd',
 			'wlroots',
-		] + additional
+		]
 
 	@property
 	@override
